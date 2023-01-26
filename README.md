@@ -3,7 +3,7 @@
 [![Actions Status](https://github.com/Instantan/match/workflows/Tests/badge.svg)](https://github.com/Instantan/match/actions)
 [![Go Report Card](https://goreportcard.com/badge/github.com/Instantan/match)](https://goreportcard.com/report/github.com/Instantan/match)
 
-a matching languages for strings with focus on performance
+> a matching language for strings with focus on performance
 
 it tries to achieve these performance goals by generating a cartesian product for every "or" combination in the query and extracting the static pre and suffixes from it.
 
