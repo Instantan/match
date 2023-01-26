@@ -8,7 +8,7 @@ type matcher struct {
 	prepared []prepared
 }
 
-// Compile takes a pattern compiles it and if its valid reuturns a matcher if not it returns an error
+// Compile takes a pattern compiles it and if its valid returns a matcher if not it returns an error
 //
 // # A pattern can look like the following:
 //
