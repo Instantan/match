@@ -146,7 +146,6 @@ func combineFixData(prefix string, suffix string, cartesianProduct [][]string) [
 }
 
 func calculateComplexityOfPrepared(p prepared) int {
-
 	// in case the pattern is of length 0 or is * it ts pattern complexity is 0
 	patternComplexity := 0
 	if p.pattern == "" || p.pattern == "*" {
@@ -160,7 +159,6 @@ func calculateComplexityOfPrepared(p prepared) int {
 		simplePatternBaseComplexity := 50
 		patternComplexity = simplePatternBaseComplexity + len(p.pattern)
 	}
-
 	// if the pattern complexity is greater then 0 its a good thing to have
 	// a large prefix. It reduces the amount of hits against the wildcard matches.
 	// if the pattern complexity is smaller then 0 a prefix is not exactly expensive but adds a bit overhead
@@ -173,7 +171,6 @@ func calculateComplexityOfPrepared(p prepared) int {
 		// a large prefix is bad
 		prefixComplexity = len(p.prefix) * 1
 	}
-
 	// the same goes for the suffix complexity
 	suffixComplexity := 0
 	if patternComplexity > 0 {
@@ -183,7 +180,6 @@ func calculateComplexityOfPrepared(p prepared) int {
 		// a large suffix is bad
 		suffixComplexity = len(p.suffix) * 1
 	}
-
 	// we add up all complexities
 	return prefixComplexity + patternComplexity + suffixComplexity
 }
